@@ -2,12 +2,12 @@ import argparse
 import yaml
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--input',type=str,help="Files",nargs="+")
+parser.add_argument('--input',type=str,help="All sweights from the toys",nargs="+")
 parser.add_argument('--name',type=str,help="Output name")
 parser.add_argument('--data',type=str,help="Data file",nargs="+")
 parser.add_argument('--mKpi',type=float,nargs=2,default=[0.65,1.5])
 parser.add_argument('--qsq',type=float,nargs=2,default=[2,10])
-parser.add_argument('--binnedfits',type=str,help="Binned fits",nargs="+",default=[])
+parser.add_argument('--binnedfits',type=str,help="Binned fits (we don't need this for now)",nargs="+",default=[])
 parser.add_argument('--center', action=argparse.BooleanOptionalAction, help="Center around true value? Default: --center means true and --no-center means false")
 parser.add_argument('--nbins',type=int,default=5)
 args = parser.parse_args()
